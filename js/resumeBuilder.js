@@ -10,7 +10,7 @@ var bio = {
     },
     "welcomeMsg": "Welcome to Computer world!!!",
     "skills": ["Java", "JEE", "XML", "XSL"],
-    "bioPic": "images/fry.jpg",
+    "biopic": "images/fry.jpg",
     "display": function(){
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -18,19 +18,13 @@ var bio = {
 
         $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg));
 
-        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-        $("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.github));
-        $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.twitter));
-        $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+        $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#topContacts, #footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.github));
+        $("#topContacts, #footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.twitter));
+        $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
-        $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-        $("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-        $("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.github));
-        $("#footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.twitter));
-        $("#footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
-
-        $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+        $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
 
         if (bio.skills.length !== 0){
             $("#header").append(HTMLskillsStart);
