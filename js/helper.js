@@ -225,7 +225,7 @@ function initializeMap() {
       // Actually searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
       service.textSearch(request, callback);
-    };
+    }
   }
 
   // Sets the boundaries of the map based on pin locations

@@ -39,7 +39,7 @@ var bio = {
             }
         }
     }
-}
+};
 bio.display();
 
 var education = {
@@ -97,7 +97,7 @@ var education = {
             $(".education-entry:last").append(HTMLonlineURL.replace("%data%", course.url));
         });
     }
-}
+};
 education.display();
 
 
@@ -127,7 +127,7 @@ var work = {
             $(".work-entry:last").append(HTMLworkDescription.replace("%data%", job.description));
         });
     }
-}
+};
 work.display();
 
 
@@ -157,7 +157,7 @@ var projects = {
             });
         });
     }
-}
+};
 projects.display();
 
 $("#mapDiv").append(googleMap);
